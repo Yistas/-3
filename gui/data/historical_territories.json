@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Британская Восточная Африка",
+        "original_country": true,
+        "successors": ["Кения", "Уганда", "Танзания"]
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": []
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Французский Индокитай",
+        "original_country": true,
+        "successors": ["Вьетнам", "Лаос", "Камбоджа"]
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": []
+      }
+    }
+  ]
+}

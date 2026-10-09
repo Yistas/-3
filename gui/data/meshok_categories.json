@@ -1,0 +1,1530 @@
+{
+ "1605": {
+  "id": "1605",
+  "name": "Австралия и Океания",
+  "subCategories": true
+ },
+ "1592": {
+  "id": "1592",
+  "name": "Азия",
+  "subCategories": true
+ },
+ "1823": {
+  "id": "1823",
+  "name": "Аксессуары",
+  "subCategories": true
+ },
+ "1679": {
+  "id": "1679",
+  "name": "Америка",
+  "subCategories": true,
+  "children": [
+   {
+    "id": "13383",
+    "name": "Антильские острова",
+    "subCategories": false
+   },
+   {
+    "id": "2153",
+    "name": "Аргентина",
+    "subCategories": false
+   },
+   {
+    "id": "13130",
+    "name": "Аруба",
+    "subCategories": false
+   },
+   {
+    "id": "2879",
+    "name": "Багамские острова",
+    "subCategories": false
+   },
+   {
+    "id": "16142",
+    "name": "Барбадос",
+    "subCategories": false
+   },
+   {
+    "id": "15386",
+    "name": "Белиз",
+    "subCategories": false
+   },
+   {
+    "id": "12873",
+    "name": "Бермуды",
+    "subCategories": false
+   },
+   {
+    "id": "12875",
+    "name": "Боливия",
+    "subCategories": false
+   },
+   {
+    "id": "2152",
+    "name": "Бразилия",
+    "subCategories": false
+   },
+   {
+    "id": "12887",
+    "name": "Венесуэла",
+    "subCategories": false
+   },
+   {
+    "id": "13385",
+    "name": "Виргинские острова",
+    "subCategories": false
+   },
+   {
+    "id": "12878",
+    "name": "Гаити",
+    "subCategories": false
+   },
+   {
+    "id": "16027",
+    "name": "Гайана",
+    "subCategories": false
+   },
+   {
+    "id": "12886",
+    "name": "Гватемала",
+    "subCategories": false
+   },
+   {
+    "id": "12884",
+    "name": "Гондурас",
+    "subCategories": false
+   },
+   {
+    "id": "16030",
+    "name": "Доминиканская республика",
+    "subCategories": false
+   },
+   {
+    "id": "2149",
+    "name": "Канада",
+    "subCategories": false
+   },
+   {
+    "id": "12882",
+    "name": "Колумбия",
+    "subCategories": false
+   },
+   {
+    "id": "12876",
+    "name": "Коста-Рика",
+    "subCategories": false
+   },
+   {
+    "id": "2150",
+    "name": "Куба",
+    "subCategories": false
+   },
+   {
+    "id": "2151",
+    "name": "Мексика",
+    "subCategories": false
+   },
+   {
+    "id": "12885",
+    "name": "Никарагуа",
+    "subCategories": false
+   },
+   {
+    "id": "12874",
+    "name": "Ньюфаундленд",
+    "subCategories": false
+   },
+   {
+    "id": "12888",
+    "name": "О-ва Карибского бассейна",
+    "subCategories": false
+   },
+   {
+    "id": "12879",
+    "name": "Панама",
+    "subCategories": false
+   },
+   {
+    "id": "12883",
+    "name": "Парагвай",
+    "subCategories": false
+   },
+   {
+    "id": "2154",
+    "name": "Перу",
+    "subCategories": false
+   },
+   {
+    "id": "16028",
+    "name": "Сальвадор",
+    "subCategories": false
+   },
+   {
+    "id": "16029",
+    "name": "Суринам",
+    "subCategories": false
+   },
+   {
+    "id": "2147",
+    "name": "США",
+    "subCategories": true
+   },
+   {
+    "id": "12880",
+    "name": "Тринидад и Тобаго",
+    "subCategories": false
+   },
+   {
+    "id": "12881",
+    "name": "Уругвай",
+    "subCategories": false
+   },
+   {
+    "id": "16141",
+    "name": "Фолклендские острова",
+    "subCategories": false
+   },
+   {
+    "id": "2155",
+    "name": "Чили",
+    "subCategories": false
+   },
+   {
+    "id": "2156",
+    "name": "Эквадор",
+    "subCategories": false
+   },
+   {
+    "id": "12877",
+    "name": "Ямайка",
+    "subCategories": false
+   },
+   {
+    "id": "2148",
+    "name": "Другое",
+    "subCategories": false
+   }
+  ]
+ },
+ "1832": {
+  "id": "1832",
+  "name": "Античные",
+  "subCategories": true
+ },
+ "1591": {
+  "id": "1591",
+  "name": "Африка",
+  "subCategories": true,
+  "children": [
+   {
+    "id": "12889",
+    "name": "Алжир",
+    "subCategories": false
+   },
+   {
+    "id": "12890",
+    "name": "Ангола",
+    "subCategories": false
+   },
+   {
+    "id": "12933",
+    "name": "Африканские штаты",
+    "subCategories": false
+   },
+   {
+    "id": "15187",
+    "name": "Бельгийские колонии",
+    "subCategories": false
+   },
+   {
+    "id": "12930",
+    "name": "Бенин",
+    "subCategories": false
+   },
+   {
+    "id": "12925",
+    "name": "Ботсвана",
+    "subCategories": false
+   },
+   {
+    "id": "15186",
+    "name": "Британская Западная Африка",
+    "subCategories": false
+   },
+   {
+    "id": "16334",
+    "name": "Буркина-Фасо",
+    "subCategories": false
+   },
+   {
+    "id": "12924",
+    "name": "Бурунди",
+    "subCategories": false
+   },
+   {
+    "id": "16335",
+    "name": "Вознесения о-в",
+    "subCategories": false
+   },
+   {
+    "id": "2166",
+    "name": "Восточная Африка",
+    "subCategories": false
+   },
+   {
+    "id": "15206",
+    "name": "Восточно-Африканский валютный союз",
+    "subCategories": false
+   },
+   {
+    "id": "16336",
+    "name": "Габон",
+    "subCategories": false
+   },
+   {
+    "id": "12915",
+    "name": "Гамбия",
+    "subCategories": false
+   },
+   {
+    "id": "12901",
+    "name": "Гана",
+    "subCategories": false
+   },
+   {
+    "id": "12900",
+    "name": "Гвинея",
+    "subCategories": false
+   },
+   {
+    "id": "16337",
+    "name": "Гвинея-Бисау",
+    "subCategories": false
+   },
+   {
+    "id": "16140",
+    "name": "Джибути",
+    "subCategories": false
+   },
+   {
+    "id": "2165",
+    "name": "Египет",
+    "subCategories": false
+   },
+   {
+    "id": "16031",
+    "name": "Заир",
+    "subCategories": false
+   },
+   {
+    "id": "12931",
+    "name": "Замбия",
+    "subCategories": false
+   },
+   {
+    "id": "16338",
+    "name": "Занзибар",
+    "subCategories": false
+   },
+   {
+    "id": "15207",
+    "name": "Западно-Африканский валютный союз",
+    "subCategories": false
+   },
+   {
+    "id": "12932",
+    "name": "Зимбабве",
+    "subCategories": false
+   },
+   {
+    "id": "12913",
+    "name": "Итальянские колонии",
+    "subCategories": false
+   },
+   {
+    "id": "13111",
+    "name": "Кабо-Верде",
+    "subCategories": false
+   },
+   {
+    "id": "12929",
+    "name": "Камерун",
+    "subCategories": false
+   },
+   {
+    "id": "12899",
+    "name": "Кения",
+    "subCategories": false
+   },
+   {
+    "id": "16339",
+    "name": "Коморские о-ва",
+    "subCategories": false
+   },
+   {
+    "id": "12895",
+    "name": "Конго",
+    "subCategories": false
+   },
+   {
+    "id": "16340",
+    "name": "Кот-д'Ивуар",
+    "subCategories": false
+   },
+   {
+    "id": "12906",
+    "name": "Лесото",
+    "subCategories": false
+   },
+   {
+    "id": "12910",
+    "name": "Либерия",
+    "subCategories": false
+   },
+   {
+    "id": "12911",
+    "name": "Ливия",
+    "subCategories": false
+   },
+   {
+    "id": "12920",
+    "name": "Маврикий",
+    "subCategories": false
+   },
+   {
+    "id": "12921",
+    "name": "Мавритания",
+    "subCategories": false
+   },
+   {
+    "id": "12907",
+    "name": "Мадагаскар",
+    "subCategories": false
+   },
+   {
+    "id": "12927",
+    "name": "Малави",
+    "subCategories": false
+   },
+   {
+    "id": "16341",
+    "name": "Мали",
+    "subCategories": false
+   },
+   {
+    "id": "12892",
+    "name": "Марокко",
+    "subCategories": false
+   },
+   {
+    "id": "12891",
+    "name": "Мозамбик",
+    "subCategories": false
+   },
+   {
+    "id": "12926",
+    "name": "Намибия",
+    "subCategories": false
+   },
+   {
+    "id": "12914",
+    "name": "Немецкие колонии",
+    "subCategories": false
+   },
+   {
+    "id": "12919",
+    "name": "Несуществующие государства",
+    "subCategories": false
+   },
+   {
+    "id": "16342",
+    "name": "Нигер",
+    "subCategories": false
+   },
+   {
+    "id": "12893",
+    "name": "Нигерия",
+    "subCategories": false
+   },
+   {
+    "id": "12918",
+    "name": "Острова Африки",
+    "subCategories": false
+   },
+   {
+    "id": "12922",
+    "name": "Родезия",
+    "subCategories": false
+   },
+   {
+    "id": "12923",
+    "name": "Руанда",
+    "subCategories": false
+   },
+   {
+    "id": "12898",
+    "name": "Сан-Томе и Принсипи",
+    "subCategories": false
+   },
+   {
+    "id": "16343",
+    "name": "Св. Елены о-в",
+    "subCategories": false
+   },
+   {
+    "id": "12916",
+    "name": "Сейшелы",
+    "subCategories": false
+   },
+   {
+    "id": "16344",
+    "name": "Сенегал",
+    "subCategories": false
+   },
+   {
+    "id": "12902",
+    "name": "Сомали",
+    "subCategories": false
+   },
+   {
+    "id": "12903",
+    "name": "Сомалиленд",
+    "subCategories": false
+   },
+   {
+    "id": "12905",
+    "name": "Судан",
+    "subCategories": false
+   },
+   {
+    "id": "12904",
+    "name": "Сьерра-Леоне",
+    "subCategories": false
+   },
+   {
+    "id": "12917",
+    "name": "Танзания",
+    "subCategories": false
+   },
+   {
+    "id": "16345",
+    "name": "Того",
+    "subCategories": false
+   },
+   {
+    "id": "16346",
+    "name": "Тристан-да-Кунья о-в",
+    "subCategories": false
+   },
+   {
+    "id": "12896",
+    "name": "Тунис",
+    "subCategories": false
+   },
+   {
+    "id": "12909",
+    "name": "Уганда",
+    "subCategories": false
+   },
+   {
+    "id": "12912",
+    "name": "Французские колонии",
+    "subCategories": false
+   },
+   {
+    "id": "2168",
+    "name": "Центральная Африка",
+    "subCategories": false
+   },
+   {
+    "id": "16347",
+    "name": "Чад",
+    "subCategories": false
+   },
+   {
+    "id": "16348",
+    "name": "Экваториальная Гвинея",
+    "subCategories": false
+   },
+   {
+    "id": "12928",
+    "name": "Эритрея",
+    "subCategories": false
+   },
+   {
+    "id": "12908",
+    "name": "Эсватини (Свазиленд)",
+    "subCategories": false
+   },
+   {
+    "id": "12897",
+    "name": "Эфиопия",
+    "subCategories": false
+   },
+   {
+    "id": "2164",
+    "name": "ЮАР",
+    "subCategories": false
+   },
+   {
+    "id": "2167",
+    "name": "Южная Африка",
+    "subCategories": false
+   },
+   {
+    "id": "2163",
+    "name": "Другое",
+    "subCategories": false
+   }
+  ]
+ },
+ "2160": {
+  "id": "2160",
+  "name": "Ближний Восток",
+  "subCategories": true
+ },
+ "15190": {
+  "id": "15190",
+  "name": "Брак",
+  "subCategories": false
+ },
+ "2140": {
+  "id": "2140",
+  "name": "Великобритания",
+  "subCategories": true
+ },
+ "13309": {
+  "id": "13309",
+  "name": "Евро",
+  "subCategories": true
+ },
+ "1256": {
+  "id": "1256",
+  "name": "Европа",
+  "subCategories": true
+ },
+ "15981": {
+  "id": "15981",
+  "name": "Жетоны монетных дворов",
+  "subCategories": true
+ },
+ "2178": {
+  "id": "2178",
+  "name": "Золотая Орда",
+  "subCategories": false
+ },
+ "11373": {
+  "id": "11373",
+  "name": "Каталоги",
+  "subCategories": false
+ },
+ "2179": {
+  "id": "2179",
+  "name": "Коллекции",
+  "subCategories": false
+ },
+ "1685": {
+  "id": "1685",
+  "name": "Литература",
+  "subCategories": false
+ },
+ "14260": {
+  "id": "14260",
+  "name": "Оптовые лоты, подборки монет",
+  "subCategories": false
+ },
+ "14258": {
+  "id": "14258",
+  "name": "Платежные жетоны",
+  "subCategories": false
+ },
+ "16508": {
+  "id": "16508",
+  "name": "Поврежденные монеты",
+  "subCategories": false
+ },
+ "15399": {
+  "id": "15399",
+  "name": "Россия и СССР",
+  "subCategories": true
+ },
+ "16349": {
+  "id": "16349",
+  "name": "Средневековье",
+  "subCategories": true
+ },
+ "14259": {
+  "id": "14259",
+  "name": "Сувенирные монеты",
+  "subCategories": false
+ },
+ "16504": {
+  "id": "16504",
+  "name": "Фантазийные выпуски",
+  "subCategories": false
+ },
+ "1798": {
+  "id": "1798",
+  "name": "Другие",
+  "subCategories": false
+ },
+ "252": {
+  "id": "252",
+  "name": "",
+  "subCategories": true,
+  "children": [
+   {
+    "id": "1605",
+    "name": "Австралия и Океания",
+    "subCategories": true
+   },
+   {
+    "id": "1592",
+    "name": "Азия",
+    "subCategories": true
+   },
+   {
+    "id": "1823",
+    "name": "Аксессуары",
+    "subCategories": true
+   },
+   {
+    "id": "1679",
+    "name": "Америка",
+    "subCategories": true,
+    "children": [
+     {
+      "id": "13383",
+      "name": "Антильские острова",
+      "subCategories": false
+     },
+     {
+      "id": "2153",
+      "name": "Аргентина",
+      "subCategories": false
+     },
+     {
+      "id": "13130",
+      "name": "Аруба",
+      "subCategories": false
+     },
+     {
+      "id": "2879",
+      "name": "Багамские острова",
+      "subCategories": false
+     },
+     {
+      "id": "16142",
+      "name": "Барбадос",
+      "subCategories": false
+     },
+     {
+      "id": "15386",
+      "name": "Белиз",
+      "subCategories": false
+     },
+     {
+      "id": "12873",
+      "name": "Бермуды",
+      "subCategories": false
+     },
+     {
+      "id": "12875",
+      "name": "Боливия",
+      "subCategories": false
+     },
+     {
+      "id": "2152",
+      "name": "Бразилия",
+      "subCategories": false
+     },
+     {
+      "id": "12887",
+      "name": "Венесуэла",
+      "subCategories": false
+     },
+     {
+      "id": "13385",
+      "name": "Виргинские острова",
+      "subCategories": false
+     },
+     {
+      "id": "12878",
+      "name": "Гаити",
+      "subCategories": false
+     },
+     {
+      "id": "16027",
+      "name": "Гайана",
+      "subCategories": false
+     },
+     {
+      "id": "12886",
+      "name": "Гватемала",
+      "subCategories": false
+     },
+     {
+      "id": "12884",
+      "name": "Гондурас",
+      "subCategories": false
+     },
+     {
+      "id": "16030",
+      "name": "Доминиканская республика",
+      "subCategories": false
+     },
+     {
+      "id": "2149",
+      "name": "Канада",
+      "subCategories": false
+     },
+     {
+      "id": "12882",
+      "name": "Колумбия",
+      "subCategories": false
+     },
+     {
+      "id": "12876",
+      "name": "Коста-Рика",
+      "subCategories": false
+     },
+     {
+      "id": "2150",
+      "name": "Куба",
+      "subCategories": false
+     },
+     {
+      "id": "2151",
+      "name": "Мексика",
+      "subCategories": false
+     },
+     {
+      "id": "12885",
+      "name": "Никарагуа",
+      "subCategories": false
+     },
+     {
+      "id": "12874",
+      "name": "Ньюфаундленд",
+      "subCategories": false
+     },
+     {
+      "id": "12888",
+      "name": "О-ва Карибского бассейна",
+      "subCategories": false
+     },
+     {
+      "id": "12879",
+      "name": "Панама",
+      "subCategories": false
+     },
+     {
+      "id": "12883",
+      "name": "Парагвай",
+      "subCategories": false
+     },
+     {
+      "id": "2154",
+      "name": "Перу",
+      "subCategories": false
+     },
+     {
+      "id": "16028",
+      "name": "Сальвадор",
+      "subCategories": false
+     },
+     {
+      "id": "16029",
+      "name": "Суринам",
+      "subCategories": false
+     },
+     {
+      "id": "2147",
+      "name": "США",
+      "subCategories": true
+     },
+     {
+      "id": "12880",
+      "name": "Тринидад и Тобаго",
+      "subCategories": false
+     },
+     {
+      "id": "12881",
+      "name": "Уругвай",
+      "subCategories": false
+     },
+     {
+      "id": "16141",
+      "name": "Фолклендские острова",
+      "subCategories": false
+     },
+     {
+      "id": "2155",
+      "name": "Чили",
+      "subCategories": false
+     },
+     {
+      "id": "2156",
+      "name": "Эквадор",
+      "subCategories": false
+     },
+     {
+      "id": "12877",
+      "name": "Ямайка",
+      "subCategories": false
+     },
+     {
+      "id": "2148",
+      "name": "Другое",
+      "subCategories": false
+     }
+    ]
+   },
+   {
+    "id": "1832",
+    "name": "Античные",
+    "subCategories": true
+   },
+   {
+    "id": "1591",
+    "name": "Африка",
+    "subCategories": true
+   },
+   {
+    "id": "2160",
+    "name": "Ближний Восток",
+    "subCategories": true
+   },
+   {
+    "id": "15190",
+    "name": "Брак",
+    "subCategories": false
+   },
+   {
+    "id": "2140",
+    "name": "Великобритания",
+    "subCategories": true
+   },
+   {
+    "id": "13309",
+    "name": "Евро",
+    "subCategories": true
+   },
+   {
+    "id": "1256",
+    "name": "Европа",
+    "subCategories": true
+   },
+   {
+    "id": "15981",
+    "name": "Жетоны монетных дворов",
+    "subCategories": true
+   },
+   {
+    "id": "2178",
+    "name": "Золотая Орда",
+    "subCategories": false
+   },
+   {
+    "id": "11373",
+    "name": "Каталоги",
+    "subCategories": false
+   },
+   {
+    "id": "2179",
+    "name": "Коллекции",
+    "subCategories": false
+   },
+   {
+    "id": "1685",
+    "name": "Литература",
+    "subCategories": false
+   },
+   {
+    "id": "14260",
+    "name": "Оптовые лоты, подборки монет",
+    "subCategories": false
+   },
+   {
+    "id": "14258",
+    "name": "Платежные жетоны",
+    "subCategories": false
+   },
+   {
+    "id": "16508",
+    "name": "Поврежденные монеты",
+    "subCategories": false
+   },
+   {
+    "id": "15399",
+    "name": "Россия и СССР",
+    "subCategories": true
+   },
+   {
+    "id": "16349",
+    "name": "Средневековье",
+    "subCategories": true
+   },
+   {
+    "id": "14259",
+    "name": "Сувенирные монеты",
+    "subCategories": false
+   },
+   {
+    "id": "16504",
+    "name": "Фантазийные выпуски",
+    "subCategories": false
+   },
+   {
+    "id": "1798",
+    "name": "Другие",
+    "subCategories": false
+   }
+  ]
+ },
+ "13383": {
+  "id": "13383",
+  "name": "Антильские острова",
+  "subCategories": false
+ },
+ "2153": {
+  "id": "2153",
+  "name": "Аргентина",
+  "subCategories": false
+ },
+ "13130": {
+  "id": "13130",
+  "name": "Аруба",
+  "subCategories": false
+ },
+ "2879": {
+  "id": "2879",
+  "name": "Багамские острова",
+  "subCategories": false
+ },
+ "16142": {
+  "id": "16142",
+  "name": "Барбадос",
+  "subCategories": false
+ },
+ "15386": {
+  "id": "15386",
+  "name": "Белиз",
+  "subCategories": false
+ },
+ "12873": {
+  "id": "12873",
+  "name": "Бермуды",
+  "subCategories": false
+ },
+ "12875": {
+  "id": "12875",
+  "name": "Боливия",
+  "subCategories": false
+ },
+ "2152": {
+  "id": "2152",
+  "name": "Бразилия",
+  "subCategories": false
+ },
+ "12887": {
+  "id": "12887",
+  "name": "Венесуэла",
+  "subCategories": false
+ },
+ "13385": {
+  "id": "13385",
+  "name": "Виргинские острова",
+  "subCategories": false
+ },
+ "12878": {
+  "id": "12878",
+  "name": "Гаити",
+  "subCategories": false
+ },
+ "16027": {
+  "id": "16027",
+  "name": "Гайана",
+  "subCategories": false
+ },
+ "12886": {
+  "id": "12886",
+  "name": "Гватемала",
+  "subCategories": false
+ },
+ "12884": {
+  "id": "12884",
+  "name": "Гондурас",
+  "subCategories": false
+ },
+ "16030": {
+  "id": "16030",
+  "name": "Доминиканская республика",
+  "subCategories": false
+ },
+ "2149": {
+  "id": "2149",
+  "name": "Канада",
+  "subCategories": false
+ },
+ "12882": {
+  "id": "12882",
+  "name": "Колумбия",
+  "subCategories": false
+ },
+ "12876": {
+  "id": "12876",
+  "name": "Коста-Рика",
+  "subCategories": false
+ },
+ "2150": {
+  "id": "2150",
+  "name": "Куба",
+  "subCategories": false
+ },
+ "2151": {
+  "id": "2151",
+  "name": "Мексика",
+  "subCategories": false
+ },
+ "12885": {
+  "id": "12885",
+  "name": "Никарагуа",
+  "subCategories": false
+ },
+ "12874": {
+  "id": "12874",
+  "name": "Ньюфаундленд",
+  "subCategories": false
+ },
+ "12888": {
+  "id": "12888",
+  "name": "О-ва Карибского бассейна",
+  "subCategories": false
+ },
+ "12879": {
+  "id": "12879",
+  "name": "Панама",
+  "subCategories": false
+ },
+ "12883": {
+  "id": "12883",
+  "name": "Парагвай",
+  "subCategories": false
+ },
+ "2154": {
+  "id": "2154",
+  "name": "Перу",
+  "subCategories": false
+ },
+ "16028": {
+  "id": "16028",
+  "name": "Сальвадор",
+  "subCategories": false
+ },
+ "16029": {
+  "id": "16029",
+  "name": "Суринам",
+  "subCategories": false
+ },
+ "2147": {
+  "id": "2147",
+  "name": "США",
+  "subCategories": true
+ },
+ "12880": {
+  "id": "12880",
+  "name": "Тринидад и Тобаго",
+  "subCategories": false
+ },
+ "12881": {
+  "id": "12881",
+  "name": "Уругвай",
+  "subCategories": false
+ },
+ "16141": {
+  "id": "16141",
+  "name": "Фолклендские острова",
+  "subCategories": false
+ },
+ "2155": {
+  "id": "2155",
+  "name": "Чили",
+  "subCategories": false
+ },
+ "2156": {
+  "id": "2156",
+  "name": "Эквадор",
+  "subCategories": false
+ },
+ "12877": {
+  "id": "12877",
+  "name": "Ямайка",
+  "subCategories": false
+ },
+ "2148": {
+  "id": "2148",
+  "name": "Другое",
+  "subCategories": false
+ },
+ "12889": {
+  "id": "12889",
+  "name": "Алжир",
+  "subCategories": false
+ },
+ "12890": {
+  "id": "12890",
+  "name": "Ангола",
+  "subCategories": false
+ },
+ "12933": {
+  "id": "12933",
+  "name": "Африканские штаты",
+  "subCategories": false
+ },
+ "15187": {
+  "id": "15187",
+  "name": "Бельгийские колонии",
+  "subCategories": false
+ },
+ "12930": {
+  "id": "12930",
+  "name": "Бенин",
+  "subCategories": false
+ },
+ "12925": {
+  "id": "12925",
+  "name": "Ботсвана",
+  "subCategories": false
+ },
+ "15186": {
+  "id": "15186",
+  "name": "Британская Западная Африка",
+  "subCategories": false
+ },
+ "16334": {
+  "id": "16334",
+  "name": "Буркина-Фасо",
+  "subCategories": false
+ },
+ "12924": {
+  "id": "12924",
+  "name": "Бурунди",
+  "subCategories": false
+ },
+ "16335": {
+  "id": "16335",
+  "name": "Вознесения о-в",
+  "subCategories": false
+ },
+ "2166": {
+  "id": "2166",
+  "name": "Восточная Африка",
+  "subCategories": false
+ },
+ "15206": {
+  "id": "15206",
+  "name": "Восточно-Африканский валютный союз",
+  "subCategories": false
+ },
+ "16336": {
+  "id": "16336",
+  "name": "Габон",
+  "subCategories": false
+ },
+ "12915": {
+  "id": "12915",
+  "name": "Гамбия",
+  "subCategories": false
+ },
+ "12901": {
+  "id": "12901",
+  "name": "Гана",
+  "subCategories": false
+ },
+ "12900": {
+  "id": "12900",
+  "name": "Гвинея",
+  "subCategories": false
+ },
+ "16337": {
+  "id": "16337",
+  "name": "Гвинея-Бисау",
+  "subCategories": false
+ },
+ "16140": {
+  "id": "16140",
+  "name": "Джибути",
+  "subCategories": false
+ },
+ "2165": {
+  "id": "2165",
+  "name": "Египет",
+  "subCategories": false
+ },
+ "16031": {
+  "id": "16031",
+  "name": "Заир",
+  "subCategories": false
+ },
+ "12931": {
+  "id": "12931",
+  "name": "Замбия",
+  "subCategories": false
+ },
+ "16338": {
+  "id": "16338",
+  "name": "Занзибар",
+  "subCategories": false
+ },
+ "15207": {
+  "id": "15207",
+  "name": "Западно-Африканский валютный союз",
+  "subCategories": false
+ },
+ "12932": {
+  "id": "12932",
+  "name": "Зимбабве",
+  "subCategories": false
+ },
+ "12913": {
+  "id": "12913",
+  "name": "Итальянские колонии",
+  "subCategories": false
+ },
+ "13111": {
+  "id": "13111",
+  "name": "Кабо-Верде",
+  "subCategories": false
+ },
+ "12929": {
+  "id": "12929",
+  "name": "Камерун",
+  "subCategories": false
+ },
+ "12899": {
+  "id": "12899",
+  "name": "Кения",
+  "subCategories": false
+ },
+ "16339": {
+  "id": "16339",
+  "name": "Коморские о-ва",
+  "subCategories": false
+ },
+ "12895": {
+  "id": "12895",
+  "name": "Конго",
+  "subCategories": false
+ },
+ "16340": {
+  "id": "16340",
+  "name": "Кот-д'Ивуар",
+  "subCategories": false
+ },
+ "12906": {
+  "id": "12906",
+  "name": "Лесото",
+  "subCategories": false
+ },
+ "12910": {
+  "id": "12910",
+  "name": "Либерия",
+  "subCategories": false
+ },
+ "12911": {
+  "id": "12911",
+  "name": "Ливия",
+  "subCategories": false
+ },
+ "12920": {
+  "id": "12920",
+  "name": "Маврикий",
+  "subCategories": false
+ },
+ "12921": {
+  "id": "12921",
+  "name": "Мавритания",
+  "subCategories": false
+ },
+ "12907": {
+  "id": "12907",
+  "name": "Мадагаскар",
+  "subCategories": false
+ },
+ "12927": {
+  "id": "12927",
+  "name": "Малави",
+  "subCategories": false
+ },
+ "16341": {
+  "id": "16341",
+  "name": "Мали",
+  "subCategories": false
+ },
+ "12892": {
+  "id": "12892",
+  "name": "Марокко",
+  "subCategories": false
+ },
+ "12891": {
+  "id": "12891",
+  "name": "Мозамбик",
+  "subCategories": false
+ },
+ "12926": {
+  "id": "12926",
+  "name": "Намибия",
+  "subCategories": false
+ },
+ "12914": {
+  "id": "12914",
+  "name": "Немецкие колонии",
+  "subCategories": false
+ },
+ "12919": {
+  "id": "12919",
+  "name": "Несуществующие государства",
+  "subCategories": false
+ },
+ "16342": {
+  "id": "16342",
+  "name": "Нигер",
+  "subCategories": false
+ },
+ "12893": {
+  "id": "12893",
+  "name": "Нигерия",
+  "subCategories": false
+ },
+ "12918": {
+  "id": "12918",
+  "name": "Острова Африки",
+  "subCategories": false
+ },
+ "12922": {
+  "id": "12922",
+  "name": "Родезия",
+  "subCategories": false
+ },
+ "12923": {
+  "id": "12923",
+  "name": "Руанда",
+  "subCategories": false
+ },
+ "12898": {
+  "id": "12898",
+  "name": "Сан-Томе и Принсипи",
+  "subCategories": false
+ },
+ "16343": {
+  "id": "16343",
+  "name": "Св. Елены о-в",
+  "subCategories": false
+ },
+ "12916": {
+  "id": "12916",
+  "name": "Сейшелы",
+  "subCategories": false
+ },
+ "16344": {
+  "id": "16344",
+  "name": "Сенегал",
+  "subCategories": false
+ },
+ "12902": {
+  "id": "12902",
+  "name": "Сомали",
+  "subCategories": false
+ },
+ "12903": {
+  "id": "12903",
+  "name": "Сомалиленд",
+  "subCategories": false
+ },
+ "12905": {
+  "id": "12905",
+  "name": "Судан",
+  "subCategories": false
+ },
+ "12904": {
+  "id": "12904",
+  "name": "Сьерра-Леоне",
+  "subCategories": false
+ },
+ "12917": {
+  "id": "12917",
+  "name": "Танзания",
+  "subCategories": false
+ },
+ "16345": {
+  "id": "16345",
+  "name": "Того",
+  "subCategories": false
+ },
+ "16346": {
+  "id": "16346",
+  "name": "Тристан-да-Кунья о-в",
+  "subCategories": false
+ },
+ "12896": {
+  "id": "12896",
+  "name": "Тунис",
+  "subCategories": false
+ },
+ "12909": {
+  "id": "12909",
+  "name": "Уганда",
+  "subCategories": false
+ },
+ "12912": {
+  "id": "12912",
+  "name": "Французские колонии",
+  "subCategories": false
+ },
+ "2168": {
+  "id": "2168",
+  "name": "Центральная Африка",
+  "subCategories": false
+ },
+ "16347": {
+  "id": "16347",
+  "name": "Чад",
+  "subCategories": false
+ },
+ "16348": {
+  "id": "16348",
+  "name": "Экваториальная Гвинея",
+  "subCategories": false
+ },
+ "12928": {
+  "id": "12928",
+  "name": "Эритрея",
+  "subCategories": false
+ },
+ "12908": {
+  "id": "12908",
+  "name": "Эсватини (Свазиленд)",
+  "subCategories": false
+ },
+ "12897": {
+  "id": "12897",
+  "name": "Эфиопия",
+  "subCategories": false
+ },
+ "2164": {
+  "id": "2164",
+  "name": "ЮАР",
+  "subCategories": false
+ },
+ "2167": {
+  "id": "2167",
+  "name": "Южная Африка",
+  "subCategories": false
+ },
+ "2163": {
+  "id": "2163",
+  "name": "Другое",
+  "subCategories": false
+ }
+}
