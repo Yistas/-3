@@ -1,3 +1,5 @@
+
+
 # -*- coding: utf-8 -*-
 
 """
@@ -959,12 +961,42 @@ class PurchasesAutofillMixin:
             if hasattr(self, 'save_status_label'):
                 self.save_status_label.setText(f"❌ Ошибка: {str(e)[:50]}")
     
+    def _available_units(self, purchase):
+        """Сколько одинаковых монет можно списать из закупки (по КОЛ/Обмену)."""
+        try:
+            qty = purchase.quantity or 1
+            exch = purchase.ucoin_exchange_count or 0
+            if not exch:
+                exch = 1 if purchase.ucoin_exchange else 0
+            if qty > 1 and exch > 1:
+                return min(qty, exch)
+            return max(qty, exch)
+        except Exception:
+            return 1
+
+    def _lot_key(self, purchase):
+        """Ключ лота (номер закупки). Строка без номера — самостоятельный лот."""
+        try:
+            n = purchase.purchase_number
+            if n is not None and str(n).strip():
+                return str(n).strip()
+        except Exception:
+            pass
+        return f"#{getattr(purchase, 'id', 0)}"
+
     def _process_parsed_data(self, coins_data, nickname, deal_number):
         """Обрабатывает распарсенные данные и обновляет закупки.
 
-        В продаже может быть НЕСКОЛЬКО ОДИНАКОВЫХ монет — каждая строка CSV
-        сопоставляется СВОЕЙ закупке (без повторного использования),
-        совпадения выбираются по возрастанию №Зак (id).
+        Распределение идёт в два прохода:
+        1. Одинаковые монеты из CSV (страна + год + номинал) объединяются
+           в группы, для каждой группы определяются кандидаты-строки
+           (с fallback-ключами и фильтром по валюте).
+        2. Глобальная оптимизация по лотам (номерам закупок): жадно
+           выбирается лот, покрывающий максимум групп/монет, и монеты
+           назначаются на строки ВНУТРИ этого лота. Так одна закупка
+           забирает сразу несколько разных монет (минимум лотов).
+        Каждая строка CSV используется один раз; внутри лота строки
+        выбираются сначала точно покрывающие, затем по возрастанию №Зак.
         """
         if not coins_data:
             if hasattr(self, 'save_status_label'):
@@ -1010,12 +1042,14 @@ class PurchasesAutofillMixin:
 
         used_set = set()  # id() уже использованных закупок (защита от дублей)
 
-        # === Обработка каждой монеты из CSV ===
+        # === Проход 1: группировка одинаковых монет CSV по ключу поиска ===
+        # (одинаковые = совпадают страна, год и нормализованный номинал)
+        coin_groups = {}
+        coin_order = []
         for coin_info in coins_data:
             country_csv = (coin_info.get('country') or '').strip()
             year = self._normalize_year(coin_info.get('year'))
             denomination_csv = (coin_info.get('denomination') or '').strip()
-            currency_csv = (coin_info.get('currency') or '').strip()
             price = coin_info.get('price')
             if price:
                 total_sum += price
@@ -1028,45 +1062,134 @@ class PurchasesAutofillMixin:
             # Поиск ключа с fallback-вариантами
             denom_normalized = self._normalize_denomination_for_compare(denomination_csv) if denomination_csv else None
             base_key = (country_csv, year, denom_normalized)
-            base_list = purchase_index.get(base_key)
-            if base_list is None and denomination_csv:
+            if purchase_index.get(base_key) is None and denomination_csv:
                 base_key = (country_csv, year, denomination_csv)
-                base_list = purchase_index.get(base_key)
-            if base_list is None:
+            if purchase_index.get(base_key) is None:
                 base_key = (country_csv, year, None)
-                base_list = purchase_index.get(base_key)
-            if base_list is None:
-                base_list = []
 
-            # Фильтр по валюте (если указан)
+            group = coin_groups.get(base_key)
+            if group is None:
+                group = {'coins': [], 'remaining': 0, 'pos': 0,
+                         'pool': None, 'force_single': False}
+                coin_groups[base_key] = group
+                coin_order.append(base_key)
+            group['coins'].append(coin_info)
+            group['remaining'] += 1
+
+        # === Подготовка кандидатов по группам (валютный фильтр — один на группу) ===
+        groups = []
+        for base_key in coin_order:
+            group = coin_groups[base_key]
+            base_list = purchase_index.get(base_key) or []
+
+            currency_csv = (group['coins'][0].get('currency') or '').strip()
             candidates = base_list
             if currency_csv and currency_csv != '—' and base_list:
                 filtered = [p for p in base_list if self._compare_currencies(currency_csv, p.currency)]
                 if filtered:
                     candidates = filtered
 
-            # Первая НЕиспользованная закупка по возрастанию №Зак
-            selected = None
-            for p in candidates:
-                if id(p) in used_set:
-                    continue
-                selected = p
+            group['pool'] = list(candidates)
+            # Fallback на (страна, год, None): номинал не участвовал в ключе,
+            # поэтому монеты распределяются строго по одной на строку
+            group['force_single'] = base_key[2] is None
+            groups.append(group)
+
+        # === Проход 2: глобальное распределение по лотам (минимум закупок) ===
+        while True:
+            pending = [g for g in groups if g['remaining'] > 0]
+            if not pending:
                 break
 
-            if selected:
-                used_set.add(id(selected))
-                remainder = self._fill_purchase(selected, nickname, deal_number, price)
-                # Копия-остаток доступна для следующих одинаковых монет
-                if remainder is not None:
-                    base_list.append(remainder)
-                    new_remainders.append(remainder)
-                filled += 1
-                self.logger.info(f"  ✅ Найдена монета: {country_csv} {denomination_csv} {year} -> №Зак={selected.id}")
-            else:
-                not_found += 1
-                error_msg = f"{country_csv}| {denomination_csv}| {currency_csv}| {year}"
-                not_found_list.append(error_msg)
-                self.logger.debug(f"  ❌ Не найдена: {error_msg}")
+            # Покрытие лотами: lot -> {'cover': {idx группы: сколько монет можно взять},
+            #                          'min_id': минимальный id строки лота}
+            lot_cover = {}
+            for gi, g in enumerate(groups):
+                if g['remaining'] <= 0:
+                    continue
+                rows_by_lot = {}
+                for p in g['pool']:
+                    if id(p) in used_set:
+                        continue
+                    rows_by_lot.setdefault(self._lot_key(p), []).append(p)
+                for lot, rows in rows_by_lot.items():
+                    if g['force_single']:
+                        units = len(rows)  # строго одна монета на строку
+                    else:
+                        units = sum(self._available_units(p) for p in rows)
+                    if units <= 0:
+                        continue
+                    info = lot_cover.setdefault(lot, {'cover': {}, 'min_id': None})
+                    info['cover'][gi] = min(units, g['remaining'])
+                    for p in rows:
+                        pid = p.id if p.id is not None else 10**18
+                        if info['min_id'] is None or pid < info['min_id']:
+                            info['min_id'] = pid
+
+            if not lot_cover:
+                # Свободных строк не осталось — всё неназначенное в "не найдено"
+                for g in pending:
+                    for coin_info in g['coins'][g['pos']:]:
+                        not_found += 1
+                        error_msg = (
+                            f"{(coin_info.get('country') or '').strip()}| "
+                            f"{(coin_info.get('denomination') or '').strip()}| "
+                            f"{(coin_info.get('currency') or '').strip()}| "
+                            f"{self._normalize_year(coin_info.get('year'))}"
+                        )
+                        not_found_list.append(error_msg)
+                        self.logger.debug(f"  ❌ Не найдена: {error_msg}")
+                break
+
+            # Выбор лота: максимум групп, затем монет, затем меньший №строки
+            best_key = None
+            best_lot = None
+            best_info = None
+            for lot, info in lot_cover.items():
+                key = (-len(info['cover']), -sum(info['cover'].values()), info['min_id'])
+                if best_key is None or key < best_key:
+                    best_key, best_lot, best_info = key, lot, info
+
+            self.logger.info(
+                f"  🗂️ Лот {best_lot}: покрывает {len(best_info['cover'])} групп, "
+                f"{sum(best_info['cover'].values())} монет"
+            )
+
+            # Назначение групп на строки ВНУТРИ выбранного лота
+            for gi in sorted(best_info['cover'].keys()):
+                g = groups[gi]
+                rows = [p for p in g['pool']
+                        if self._lot_key(p) == best_lot and id(p) not in used_set]
+                while g['remaining'] > 0 and rows:
+                    if g['force_single']:
+                        rows.sort(key=lambda p: (p.id is None, p.id if p.id is not None else 0))
+                        selected = rows.pop(0)
+                        count = 1
+                    else:
+                        rows.sort(key=lambda p: (
+                            0 if self._available_units(p) == g['remaining'] else 1,
+                            -self._available_units(p),
+                            p.id is None,
+                            p.id if p.id is not None else 0,
+                        ))
+                        selected = rows.pop(0)
+                        count = min(self._available_units(selected), g['remaining'])
+
+                    used_set.add(id(selected))
+                    remainder = self._fill_purchase(selected, nickname, deal_number, count=count)
+                    g['remaining'] -= count
+                    g['pos'] += count
+                    filled += count
+                    coin0 = g['coins'][g['pos'] - 1]
+                    self.logger.info(
+                        f"  ✅ Найдено {count} шт: {coin0.get('country')} "
+                        f"{coin0.get('denomination')} {coin0.get('year')} -> "
+                        f"лот {best_lot}, №Зак={selected.id}"
+                    )
+                    # Копия-остаток доступна для следующих одинаковых монет
+                    if remainder is not None:
+                        g['pool'].append(remainder)
+                        new_remainders.append(remainder)
 
         # === Сохраняем созданные копии-остатки ===
         try:
@@ -1104,23 +1227,25 @@ class PurchasesAutofillMixin:
         except Exception as e:
             self.logger.error(f"Ошибка обновления таблицы: {e}")
 
-    def _fill_purchase(self, purchase, nickname, deal_number, price):
+    def _fill_purchase(self, purchase, nickname, deal_number, count=1):
         """Заполняет закупку данными продажи БЕЗ СУММЫ
         (сумма проставляется при закрытии сделки).
 
-        Если КОЛ/Обмен > 1 — создаёт копию строки с уменьшением "Обмен" и "КОЛ"
-        на 1 (остаток), а исходная строка становится проданной (КОЛ=1).
-        Возвращает созданную копию-остаток или None.
+        count — сколько одинаковых монет из CSV списывается на строку.
+        Если КОЛ/Обмен > count — создаёт копию строки с уменьшением "Обмен"
+        и "КОЛ" на count (остаток), а исходная строка становится проданной
+        (КОЛ=count). Возвращает созданную копию-остаток или None.
         """
         from datetime import datetime as _dt
         remainder = None
+        count = max(1, int(count or 1))
         qty = purchase.quantity or 1
         exch = purchase.ucoin_exchange_count or 0
         if not exch:
             exch = 1 if purchase.ucoin_exchange else 0
 
-        # === КОЛ/Обмен != 1: разделяем строку ===
-        if qty > 1 or exch > 1:
+        # === КОЛ/Обмен > count: разделяем строку ===
+        if qty > count or exch > count:
             try:
                 from database.models import Purchase
                 from sqlalchemy import inspect as sa_inspect
@@ -1133,9 +1258,9 @@ class PurchasesAutofillMixin:
                         setattr(remainder, col.name, getattr(purchase, col.name))
                     except Exception:
                         pass
-                # Копия-остаток: КОЛ и Обмен уменьшены на 1
-                remainder.quantity = (qty - 1) if qty > 1 else qty
-                new_exch = (exch - 1) if exch > 1 else exch
+                # Копия-остаток: КОЛ и Обмен уменьшены на count
+                remainder.quantity = (qty - count) if qty > count else qty
+                new_exch = (exch - count) if exch > count else exch
                 remainder.ucoin_exchange_count = new_exch
                 remainder.ucoin_exchange = bool(new_exch > 0)
                 # Остаток НЕ продан
@@ -1145,8 +1270,8 @@ class PurchasesAutofillMixin:
                 remainder.purchase_batch = (purchase.purchase_batch or "0")
                 remainder.updated_at = _dt.now()
                 self.db_manager.session.add(remainder)
-                # Исходная строка — проданная монета (1 шт)
-                purchase.quantity = 1
+                # Исходная строка — проданные монеты (count шт)
+                purchase.quantity = count if qty > count else qty
                 purchase.ucoin_exchange = False
                 purchase.ucoin_exchange_count = 0
                 self.logger.info(
